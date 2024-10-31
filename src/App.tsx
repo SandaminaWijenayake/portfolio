@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Description from './component/Description';
 import Footer from './component/Footer';
 import Navbar from './component/Navbar';
@@ -7,12 +7,18 @@ import Resume from './component/Resume';
 import Skills from './component/Skills';
 import './index.css';
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDarkMode);
+  }, [isDarkMode]); 
 
   const toggleDarkMode = () => {
     console.log('Dark mode toggled:', !isDarkMode);
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle('dark', !isDarkMode);
+    {console.log(isDarkMode, "dark mode")}
+
   };
 
   return (

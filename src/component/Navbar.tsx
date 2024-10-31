@@ -36,14 +36,13 @@ export default function Navbar({ toggleDarkMode, isDarkMode }: toggleDarkModePro
                         Contact
                         <span className="absolute left-0 bottom-0 w-full h-[2px] bg-lightmodeblue dark:bg-bHover  scale-x-0 group-hover:scale-x-100 transform origin-left transition-transform duration-300"></span>
                     </a>
-                    <a onClick={toggleDarkMode} className="relative group  -translate-y-1">
+                    <button onClick={toggleDarkMode} className="relative group  -translate-y-1">
                         <div className="absolute inset-0 bg-lightmodeblue dark:bg-lightBule rounded-full w-8 h-8 transform scale-0 group-hover:scale-100 transition-transform duration-200"></div>
 
                         <div className="relative z-10 group-hover:text-white dark:group-hover:text-darkBg transition-colors  duration-200 text-lg font-bold translate-x-[5px]">
-                            {isDarkMode ? <NightlightIcon /> : <LightModeIcon />}
+                            {isDarkMode ? <LightModeIcon /> : <NightlightIcon />}
                         </div>
-
-                    </a>
+                    </button>
 
                 </div>
             </div>
