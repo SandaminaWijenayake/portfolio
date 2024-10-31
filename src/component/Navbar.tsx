@@ -39,7 +39,7 @@ export default function Navbar({ toggleDarkMode, isDarkMode }: toggleDarkModePro
                     <button onClick={toggleDarkMode} className="relative group  -translate-y-1">
                         <div className="absolute inset-0 bg-lightmodeblue dark:bg-lightBule rounded-full w-8 h-8 transform scale-0 group-hover:scale-100 transition-transform duration-200"></div>
 
-                        <div className="relative z-10 group-hover:text-white dark:group-hover:text-darkBg transition-colors  duration-200 text-lg font-bold translate-x-[5px]">
+                        <div className="relative z-10 group-hover:text-white dark:group-hover:text-darkBg transition-colors  duration-200 text-lg font-bold translate-x-[4px] translate-y-[1px]">
                             {isDarkMode ? <LightModeIcon /> : <NightlightIcon />}
                         </div>
                     </button>
