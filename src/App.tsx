@@ -5,6 +5,7 @@ import Navbar from './component/Navbar';
 import Projects from './component/Porjects';
 import Resume from './component/Resume';
 import Skills from './component/Skills';
+import { BrowserRouter } from "react-router";
 import './index.css';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+        <BrowserRouter>
       <div className='bg-backGround dark:bg-darkBg '>
         <div className='dark:text-lightBule w-3/5 m-auto '>
           <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
@@ -33,6 +35,7 @@ function App() {
         </div>
         <Footer />
       </div>
+      </BrowserRouter>
 
     </>
   )
