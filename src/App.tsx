@@ -26,7 +26,7 @@ function App() {
     <>
         <BrowserRouter>
       <div className='bg-backGround dark:bg-darkBg '>
-        <div className='dark:text-lightBule w-3/5 m-auto '>
+        <div className='dark:text-lightBule xl:w-3/5 m-auto w-11/12'>
           <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
           <Description />
           <Projects />
